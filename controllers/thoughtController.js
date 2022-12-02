@@ -1,14 +1,14 @@
 const { Thought, User } = require('../models');
 
 module.exports = {
-    // GET all users
+    // GET all thoughts
     getThoughts(req, res) {
         Thought.find()
             .then((thoughts) => res.json(thoughts))
             .catch((err) => res.status(500).json(err));
     },
 
-    // GET a single user
+    // GET a single thought
     getSingleThought(req, res) {
         Thought.findOne({ _id: req.params.thoughtId })
             .select('-__v')
@@ -20,7 +20,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
 
-    // POST (create) a user
+    // POST (create) a thought
     createThought(req, res) {
         Thought.create(req.body)
             .then((thought) => {
@@ -38,7 +38,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
 
-    // PUT (update) a user
+    // PUT (update) a thought
     updateThought(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
@@ -53,7 +53,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
 
-    // DELETE a user
+    // DELETE a thought
     deleteThought(req, res) {
         Thought.findOneAndRemove({ _id: req.params.thoughtId })
             .then((thought) => 
@@ -73,7 +73,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
 
-    // add a new friend to a user's friend list
+    // add a new reaction to a thought
     addReaction(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
@@ -88,7 +88,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
 
-    // remove a friend from a user's friend list
+    // remove a reaction from a thought
     removeReaction(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
