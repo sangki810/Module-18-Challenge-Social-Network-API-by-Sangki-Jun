@@ -22,7 +22,7 @@ This is the completed module 18 challenge from the UCF FSF Bootcamp. The purpose
 1. Open the integrated terminal and run `npm start`.
 2. Use Insomnia to run GET, POST, PUT, DELETE routes on the database. <br /> 
 
-You can get a more detailed instruction using this link: [Video Instruction]()
+You can get a more detailed instruction using this link: [Video Instruction](https://drive.google.com/file/d/1OiSoquCUdP7SjFX_IszW2qNvkqxFexPs/view)
 
 ## Contributing
 If you have any good ideas or changes you want to share, you can create a pull request or add issues to the repository. You can also contact me using the information in the [Questions](#questions) section.<br />
