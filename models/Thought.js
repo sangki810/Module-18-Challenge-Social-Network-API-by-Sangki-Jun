@@ -4,7 +4,7 @@ const { format_date } = require('../utils/helpers');
 
 const thoughtSchema = new Schema(
     {
-        toughtText: {
+        thoughtText: {
             type: String,
             required: true,
             minlength: 1,
